@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 body {
-    font-family: 'Cabin';
+    font-family: 'Cabin',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #758190;
 }
 
@@ -22,6 +22,10 @@ body {
 .stats-container {
     display: flex;
     
+}
+
+.highlight{
+    font-weight: 700;
 }
 
 .stats-container:hover {
@@ -61,6 +65,7 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    
 }
 
 .game-card:hover {
@@ -68,14 +73,51 @@ body {
     box-shadow: 0 0 30px lightblue;
 }
 
+.game-card, .stats-container {
+    transition: box-shadow 0.2s ease-in-out;
+}
+
 #button-container {
     text-align: center;
 }
 
 button {
-    font-family: 'Cabin';
+    font-family: 'Cabin',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: none;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    cursor: pointer;
 } 
+
+.active-btn{
+    background-color: #bde0eb;
+    border: 2px solid #8a9ba8;
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.progress-bar {
+  background-color: #e6e9ef;
+  border-radius: 999px;
+  height: 12px;
+  width: 100%;
+  
+}
+
+.progress {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+  font-size: 12px;
+  white-space: nowrap;
+}
